@@ -1,0 +1,47 @@
+  /* WhatsApp Button Styles */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom of the screen */
+    left: 30px;   /* Distance from the left of the screen */
+    background-color: #25d366;
+    color: white;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Make sure it stays on top of other elements */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button i {
+    margin: 0; /* Center the WhatsApp icon */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* Fix the toast at the top of the screen */
+.toast {
+    position: fixed;
+    top: 0; /* Position at the top of the screen */
+    right: 0; /* Optionally position it to the right */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    margin-top: 20px; /* Space between the top and the toast */
+}
+
+

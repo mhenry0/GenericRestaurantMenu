@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Gourmet Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome JS for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="banner1">
+            <!-- Background image -->
+            <img src="./logobg.png" alt="Wok Asian Food">
+        </div>
+    </header>
+
+    <style>
+        /* Resetting default styles */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling the header section */
+        .banner1 {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* Full viewport height */
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Center content vertically and horizontally */
+        }
+
+        /* Styling the image for responsiveness */
+        .banner1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the area without distortion */
+        }
+
+        /* Media queries for smaller devices */
+        @media (max-width: 768px) {
+            .banner1 {
+                height: 60vh;
+                /* Adjust height for smaller screens */
+            }
+        }
+
+        @media (max-width: 915px) {
+            .banner1 {
+                height: 50vh;
+                /* Further adjust height for very small screens */
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .banner1 {
+                height: 90vh;
+                /* Further adjust height for very small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner1 {
+                height: 50vh;
+                /* Further adjust height for very small screens */
+            }
+        }
+
+        @media (max-width: 432px) {
+            .banner1 {
+                height: 50vh;
+                /* Further adjust height for very small screens */
+            }
+        }
+    </style>
+
+
+    <!-- Welcome Message Section -->
+    <section class="about-us"
+        style="text-align: center; padding: 50px 20px; background-color: #ffffff; font-size: 18px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="font-family: 'Pacifico', cursive;">Welcome to Wok</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Proin tortor purus platea
+            sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue.
+            Pharetra vestibulum posuere ornare faucibus fusce dictumst
+            orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.
+        </p>
+        <br>
+        <a href="#menu" class="btn btn-primary" style="font-size: 20px; border-radius: 30px;">Explore our Fine
+            Selections</a>
+    </section>
+
+    <br>
+    <p style="text-align: center; font-size: 30px; font-family: 'Pacifico', cursive;">Select a Language to Translate:
+    </p>
+
+    <div id="google_translate_element" style="text-align: center;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'es' }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Menú Section -->
+    <section id="menu" class="container my-5">
+        <h2 class="text-center" style="font-size: 45px; font-family: 'Pacifico', cursive;">Menu</h2>
+        <br>
+        <div class="row">
+            <!-- Menu Items -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(3, 127, 173); text-align: center; color: #ffffff; border-radius: 10px;">
+        Appetizers</h3>
+    <div class="menu-item">
+        <img src="./springroll.jpg" alt="Spring Rolls" class="img-fluid" style="border-radius: 10px;">
+        <h4>Spring Rolls</h4>
+        <p><strong>Ingredients:</strong> Cabbage, carrots, glass noodles, soy sauce.</p>
+        <p><strong>Price:</strong> $8.00</p>
+    </div>
+</div>
+
+<!-- Salads and Main Courses -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(234, 239, 44); text-align: center; color: #ffffff; border-radius: 10px;">
+        Noodles and Main Dishes</h3>
+    <div class="menu-item">
+        <img src="./padthai.jpg" alt="Pad Thai" class="img-fluid" style="border-radius: 10px;">
+        <h4>Pad Thai</h4>
+        <p><strong>Ingredients:</strong> Rice noodles, shrimp, tofu, tamarind sauce, peanuts.</p>
+        <p><strong>Price:</strong> $15.00</p>
+    </div>
+</div>
+
+<!-- Desserts -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(255, 98, 0); text-align: center; color: #ffffff; border-radius: 10px;">
+        Desserts</h3>
+    <div class="menu-item">
+        <img src="./mangorice.jpg" alt="Mango Sticky Rice" class="img-fluid" style="border-radius: 10px;">
+        <h4>Mango Sticky Rice</h4>
+        <p><strong>Ingredients:</strong> Sweet rice, fresh mango, coconut cream.</p>
+        <p><strong>Price:</strong> $7.00</p>
+    </div>
+</div>
+
+<!-- Proteins -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(252, 23, 7); text-align: center; color: #ffffff; border-radius: 10px;">
+        Proteins</h3>
+    <div class="menu-item">
+        <img src="./teriyaki.jpg" alt="Teriyaki Chicken" class="img-fluid" style="border-radius: 10px; width: 100%;">
+        <h4>Teriyaki Chicken</h4>
+        <p><strong>Ingredients:</strong> Chicken, teriyaki glaze, sesame seeds.</p>
+        <p><strong>Price:</strong> $12.00</p>
+    </div>
+</div>
+
+<!-- Side Dishes -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(39, 195, 219); text-align: center; color: #ffffff; border-radius: 10px;">
+        Side Dishes</h3>
+    <div class="menu-item">
+        <img src="./friedrice.jpg" alt="Fried Rice" class="img-fluid" style="border-radius: 10px;">
+        <h4>Fried Rice</h4>
+        <p><strong>Ingredients:</strong> Jasmine rice, egg, peas, carrots, soy sauce.</p>
+        <p><strong>Price:</strong> $6.00</p>
+    </div>
+</div>
+
+<!-- Chef's Specials -->
+<div class="col-md-4">
+    <h3 style="background-color: rgb(0, 0, 0); text-align: center; color: #ffffff; border-radius: 10px;">
+        Chef's Specials</h3>
+    <div class="menu-item">
+        <img src="./bulgogi.jpg" alt="Beef Bulgogi" class="img-fluid" style="border-radius: 10px;">
+        <h4>Beef Bulgogi</h4>
+        <p><strong>Ingredients:</strong> Marinated beef, sesame oil, garlic, scallions.</p>
+        <p><strong>Price:</strong> $18.00</p>
+    </div>
+</div>
+<!-- Chef's Specials -->
+<div class="col-md-4">
+    <h3 style="background-color: rgba(40, 223, 8, 0.815); text-align: center; color: #ffffff; border-radius: 10px;">
+        Drinks</h3>
+    <div class="menu-item">
+        <img src="./pinacolada.jpg" alt="Beef Bulgogi" class="img-fluid" style="border-radius: 10px;">
+        <div class="product">
+            <h4>Pina Colada</h4>
+            <p><strong>Ingredients:</strong> White rum, coconut cream, pineapple juice, crushed ice, pineapple slice (for garnish), maraschino cherry (for garnish).</p>
+            <p><strong>Price:</strong> $6.00</p>            
+        </div>
+        
+    </div>
+</div>
+
+
+    </section>
+    <br>
+    <br>
+
+
+    <!-- TripAdvisor Section -->
+    <section class="tripadvisor-section text-center py-5"
+        style="background-image: url('./DSCF0095.JPG'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; color: #fff; border-radius: 10px;">
+        <div class="container" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+            <h3>Clients' Reviews</h3>
+            <div class="row">
+
+                <!-- TripAdvisor Widget (Example) -->
+                <div class="col-md-4">
+                    <div class="tripadvisor-review">
+                        <img src="./tripadvisor.png" alt="TripAdvisor Logo" style="max-width: 90px;">
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. </h5>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
+                        <p><strong>- Christefy</strong></p>
+                        <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
+                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tripadvisor-review">
+                        <img src="./tripadvisor.png" alt="TripAdvisor Logo" style="max-width: 90px;">
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. </h5>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
+                        <p><strong>- Christefy</strong></p>
+                        <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
+                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="tripadvisor-review">
+                        <img src="./tripadvisor.png" alt="TripAdvisor Logo" style="max-width: 90px;">
+                        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. </h5>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
+                        <p><strong>- Christefy</strong></p>
+                        <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
+                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <p><a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
+                        target="_blank" class="btn btn-success">Visit our Page on TripAdvisor</a></p>
+            </div>
+        </div>
+    </section>
+  
+    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            Are you ready to order?
+            <div class="mt-2 pt-2 border-top">
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='https://wa.me/+50222004721';">
+                    Yes, click here to order now!
+                </button>
+                
+                <button type="button" class="btn btn-secondary btn-sm" id="closeToast">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
+<script>
+    // Wait for the document to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the Toast component with autohide set to false
+        var toastEl = document.getElementById('orderToast');
+        var toast = new bootstrap.Toast(toastEl, {
+            autohide: false // Ensure the toast doesn't auto-hide
+        });
+
+        // Show the toast every 10 seconds (10000 milliseconds)
+        setInterval(function () {
+            toast.show();
+        }, 100000);
+
+        // Close the toast when the close button is clicked
+        var closeButton = document.getElementById('closeToast');
+        closeButton.addEventListener('click', function () {
+            toast.hide();
+        });
+    });
+</script>
+
+
+
+
+
+    <!-- Google Maps Embed -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.644010857934!2d-83.622233346029!3d9.079018196959519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa3ff11d74ca17b%3A0x7368aedca6a50d2c!2sRestaurante%20Tilapias%20El%20Pavon!5e1!3m2!1ses-419!2scr!4v1731887540415!5m2!1ses-419!2scr"
+        style="width: 100%; height: 300px; border: 0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button" style="text-decoration: non;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="text-white text-center py-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>At Wok, we are dedicated to offering multicultural cuisine of the highest quality,
+                        with a special focus on creating family-friendly experiences. We believe that food is a bond
+                        that brings people together, which is why we select the best ingredients to create delicious and
+                        unforgettable dishes to share with your loved ones. Each meal is an opportunity to enjoy
+                        together, creating special memories around the table in a warm and welcoming environment for the
+                        whole family.</p>
+                </div>
+    
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>
+                        <i class="bi bi-telephone"></i>
+                        <a href="tel:+50222004721" style="color: white; text-decoration: none;">+506 XXXXXX</a>
+                    </p>
+                    <p>
+                        <i class="bi bi-geo-alt" aria-label="Location Icon"></i>
+                        Your Address
+                    </p>
+                    <p>
+                        <a href="https://wa.me/+50222004721" target="_blank"
+                            style="color: white; text-decoration: none;">
+                            <i class="bi bi-whatsapp" aria-label="WhatsApp Icon"></i>
+                            Write to us on WhatsApp, click here!
+                        </a>
+                    </p>
+                  
+                    
+                    <!-- Social Media Icons -->
+                    <p>
+                        Follow us on our social medias
+                        <br>
+                        <br>
+                        <a href="https://www.facebook.com/yourpage" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+                            <i class="bi bi-facebook" aria-label="Facebook Icon"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourprofile" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+                            <i class="bi bi-instagram" aria-label="Instagram Icon"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@yourprofile" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+                            <i class="bi bi-tiktok" aria-label="TikTok Icon"></i>
+                        </a>
+                      
+
+                    </p>
+                    
+                </div>
+    
+                <!-- Logo Section -->
+                <div class="col-md-4">
+                    <img src="./whitelogo.svg" alt="Wok Logo" style="max-width: 200px; height: auto;">
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <hr class="my-4" style="border-color: white;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Wok. All rights reserved.
+                    <br>Website Developed by Nativa Innovations Web Design Agency.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Font Awesome JS for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>
