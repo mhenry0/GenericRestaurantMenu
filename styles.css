@@ -110,3 +110,27 @@ html {
           /* Further adjust height for very small screens */
       }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #navbar {
+    transition: top 0.3s;
+}
+/* Initially position navbar at top */
+.navbar-scrolled {
+    top: -80px; /* Adjust as needed */
+}

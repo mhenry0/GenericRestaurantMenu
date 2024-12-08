@@ -10,10 +10,18 @@
     <link href="./styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Font Awesome JS for Icons -->
+    <script src="script.js"></script>
+    <!-- Latest Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Latest Bootstrap JS and dependencies -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <meta keywors="Restaurant in Uvita, Gastro, Luxury, Dinning, Korean, Japanese, Chinese, Fusion">
+    <meta name="keywords" content="Restaurant in Uvita, Gastro, Luxury, Dining, Korean cuisine, Japanese fusion, Chinese dishes, Asian fusion restaurant, Best restaurant in Uvita, Fine dining in Uvita">
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/css/bootstrap.min.css" rel="stylesheet">
@@ -43,10 +51,44 @@
 
 <body>
 
+
+<!-- Sticky Navbar -->
+<nav class="sticky-top bg-light">
+    <ul class="nav justify-content-end" style="text-decoration: none; font-family: 'Pacifico'; font-size: 22px;">
+        <li class="nav-item">
+            <a class="nav-link" href="#appetizers" style="color: #000000;">Appetizers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#noodles" style="color: #000000;">Noodles & Main Dishes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#desserts" style="color: #000000;">Desserts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#proteins" style="color: #000000;">Proteins</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#side-dishes" style="color: #000000;">Side Dishes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#specials" style="color: #000000;">Chef's Specials</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#drinks" style="color: #000000;">Drinks</a>
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
     <header>
         <div class="banner1">
             <!-- Background image -->
-            <img src="./logobg.png" alt="Wok Asian Food">
+            <img src="./logobg.svg" alt="Wok Asian Food" style="width: 1000px;height: 400px;">
         </div>
     </header>
 
@@ -88,95 +130,151 @@
     <section id="menu" class="container my-5">
         <h2 class="text-center" style="font-size: 45px; font-family: 'Pacifico', cursive;">Menu</h2>
         <br>
+        <div id="appetizers" class="row"></div>
+
+        <!-- Separation Title and Image for Appetizers -->
         <div class="row">
-            <!-- Menu Items -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(3, 127, 173); text-align: center; color: #ffffff; border-radius: 10px;">
-        Appetizers</h3>
-    <div class="menu-item">
-        <img src="./springroll.jpg" alt="Spring Rolls" class="img-fluid" style="border-radius: 10px;">
-        <h4>Spring Rolls</h4>
-        <p><strong>Ingredients:</strong> Cabbage, carrots, glass noodles, soy sauce.</p>
-        <p><strong>Price:</strong> $8.00</p>
-    </div>
-</div>
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color: rgb(255, 255, 255); margin-top: 30px; background-color: #f37609;font-family: 'Pacifico', cursive;">Appetizers</h3>
+            </div>
+        </div>
+    
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./springroll.jpg" alt="Spring Rolls" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Spring Rolls</h4>
+                    <p><strong>Ingredients:</strong> Cabbage, carrots, glass noodles, soy sauce.</p>
+                    <p><strong>Price:</strong> $8.00</p>
+                </div>
+            </div>
 
-<!-- Salads and Main Courses -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(234, 239, 44); text-align: center; color: #ffffff; border-radius: 10px;">
-        Noodles and Main Dishes</h3>
-    <div class="menu-item">
-        <img src="./padthai.jpg" alt="Pad Thai" class="img-fluid" style="border-radius: 10px;">
-        <h4>Pad Thai</h4>
-        <p><strong>Ingredients:</strong> Rice noodles, shrimp, tofu, tamarind sauce, peanuts.</p>
-        <p><strong>Price:</strong> $15.00</p>
-    </div>
-</div>
 
-<!-- Desserts -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(255, 98, 0); text-align: center; color: #ffffff; border-radius: 10px;">
-        Desserts</h3>
-    <div class="menu-item">
-        <img src="./mangorice.jpg" alt="Mango Sticky Rice" class="img-fluid" style="border-radius: 10px; width: 100%;">
-        <h4>Mango Sticky Rice</h4>
-        <p><strong>Ingredients:</strong> Sweet rice, fresh mango, coconut cream.</p>
-        <p><strong>Price:</strong> $7.00</p>
-    </div>
-</div>
+            <div id="noodles" class="row"></div>
 
-<!-- Proteins -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(252, 23, 7); text-align: center; color: #ffffff; border-radius: 10px;">
-        Proteins</h3>
-    <div class="menu-item">
-        <img src="./teriyaki.jpg" alt="Teriyaki Chicken" class="img-fluid" style="border-radius: 10px; width: 100%;">
-        <h4>Teriyaki Chicken</h4>
-        <p><strong>Ingredients:</strong> Chicken, teriyaki glaze, sesame seeds.</p>
-        <p><strong>Price:</strong> $12.00</p>
-    </div>
-</div>
+        <!-- Separation Title and Image for Noodles and Main Dishes -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color: #ffffff; margin-top: 30px; background-color: #e83030;font-family: 'Pacifico', cursive;">Noodles and Main Dishes</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./padthai.jpg" alt="Pad Thai" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Pad Thai</h4>
+                    <p><strong>Ingredients:</strong> Rice noodles, shrimp, tofu, tamarind sauce, peanuts.</p>
+                    <p><strong>Price:</strong> $15.00</p>
+                </div>
+            </div>
+        </div>
+      <div id="desserts" class="row"></div>
 
-<!-- Side Dishes -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(39, 195, 219); text-align: center; color: #ffffff; border-radius: 10px;">
-        Side Dishes</h3>
-    <div class="menu-item">
-        <img src="./friedrice.jpg" alt="Fried Rice" class="img-fluid" style="border-radius: 10px;">
-        <h4>Fried Rice</h4>
-        <p><strong>Ingredients:</strong> Jasmine rice, egg, peas, carrots, soy sauce.</p>
-        <p><strong>Price:</strong> $6.00</p>
-    </div>
-</div>
+        <!-- Separation Title and Image for Desserts -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color: #ffffff; margin-top: 30px; background-color: #e31b99;font-family: 'Pacifico', cursive;">Desserts</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./mangorice.jpg" alt="Mango Sticky Rice" class="img-fluid" style="border-radius: 10px; width: 100%;">
+                    <h4>Mango Sticky Rice</h4>
+                    <p><strong>Ingredients:</strong> Sweet rice, fresh mango, coconut cream.</p>
+                    <p><strong>Price:</strong> $7.00</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="proteins" class="row"></div>
+        <!-- Separation Title and Image for Proteins -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color:#ffffff; margin-top: 30px; background-color: #f70b0b;font-family: 'Pacifico', cursive;">Proteins</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./teriyaki.jpg" alt="Teriyaki Chicken" class="img-fluid" style="border-radius: 10px; width: 100%;">
+                    <h4>Teriyaki Chicken</h4>
+                    <p><strong>Ingredients:</strong> Chicken, teriyaki glaze, sesame seeds.</p>
+                    <p><strong>Price:</strong> $12.00</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="side-dishes" class="row"></div>
+        <!-- Separation Title and Image for Side Dishes -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color: #ffffff; margin-top: 30px; background-color: #d4f30a;font-family: 'Pacifico', cursive;">Side Dishes</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./friedrice.jpg" alt="Fried Rice" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Fried Rice</h4>
+                    <p><strong>Ingredients:</strong> Jasmine rice, egg, peas, carrots, soy sauce.</p>
+                    <p><strong>Price:</strong> $6.00</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="specials" class="row"></div>
 
-<!-- Chef's Specials -->
-<div class="col-md-4">
-    <h3 style="background-color: rgb(0, 0, 0); text-align: center; color: #ffffff; border-radius: 10px;">
-        Chef's Specials</h3>
-    <div class="menu-item">
-        <img src="./bulgogi.jpg" alt="Beef Bulgogi" class="img-fluid" style="border-radius: 10px;">
-        <h4>Beef Bulgogi</h4>
-        <p><strong>Ingredients:</strong> Marinated beef, sesame oil, garlic, scallions.</p>
-        <p><strong>Price:</strong> $18.00</p>
-    </div>
-</div>
-<!-- Chef's Specials -->
-<div class="col-md-4">
-    <h3 style="background-color: rgba(40, 223, 8, 0.815); text-align: center; color: #ffffff; border-radius: 10px;">
-        Drinks</h3>
-    <div class="menu-item">
-        <img src="./pinacolada.jpg" alt="Beef Bulgogi" class="img-fluid" style="border-radius: 10px;">
-        <div class="product">
-            <h4>Pina Colada</h4>
-            <p><strong>Ingredients:</strong> White rum, coconut cream, pineapple juice, crushed ice, pineapple slice (for garnish), maraschino cherry (for garnish).</p>
-            <p><strong>Price:</strong> $6.00</p>            
+        <!-- Separation Title and Image for Chef's Specials -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color:#ffffff; margin-top: 30px; background-color: #000000;font-family: 'Pacifico', cursive;">Chef's Specials</h3>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./bulgogi.jpg" alt="Beef Bulgogi" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Beef Bulgogi</h4>
+                    <p><strong>Ingredients:</strong> Marinated beef, sesame oil, garlic, scallions.</p>
+                    <p><strong>Price:</strong> $18.00</p>
+                </div>
+            </div>
+        </div>
+        <div id="drinks" class="row"></div>
+        <!-- Separation Title and Image for Drinks -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 style="font-size: 36px; color:#ffffff; margin-top: 30px; background-color: #31e2c8;font-family: 'Pacifico', cursive;">Drinks</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./pinacolada.jpg" alt="Pina Colada" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Pina Colada</h4>
+                    <p><strong>Ingredients:</strong> White rum, coconut cream, pineapple juice, crushed ice, pineapple slice (for garnish), maraschino cherry (for garnish).</p>
+                    <p><strong>Price:</strong> $6.00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item">
+                    <img src="./bluelagoon.webp" alt="Pina Colada" class="img-fluid" style="border-radius: 10px;">
+                    <h4>Blue Lagoon Cocktail</h4>
+                    <p><strong>Ingredients:</strong> Vodka, blue curaçao, lemonade, lemon wheel, and maraschino cherry</p>
+                    <p><strong>Price:</strong> $7.00</p>
+
+                </div>
+            </div>
+            
         </div>
         
-    </div>
-</div>
-
-
     </section>
+    
     <br>
     <br>
 
@@ -198,7 +296,7 @@
                             labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
                         <p><strong>- Christefy</strong></p>
                         <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
-                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                            target="_blank" class="btn btn-warning">Read More Reviews</a>
                     </div>
                 </div>
 
@@ -211,7 +309,7 @@
                             labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
                         <p><strong>- Christefy</strong></p>
                         <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
-                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                            target="_blank" class="btn btn-warning">Read More Reviews</a>
                     </div>
                 </div>
 
@@ -224,7 +322,7 @@
                             labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. "</p>
                         <p><strong>- Christefy</strong></p>
                         <a href="https://www.tripadvisor.es/Restaurant_Review-g1022300-d1806232-Reviews-Tilapias_El_Pavon-Ojochal_Province_of_Puntarenas.html"
-                            target="_blank" class="btn btn-info">Read More Reviews</a>
+                            target="_blank" class="btn btn-warning">Read More Reviews</a>
                     </div>
                 </div>
             </div>
@@ -305,9 +403,20 @@
                     <p>At Wok, we are dedicated to offering multicultural cuisine of the highest quality,
                         with a special focus on creating family-friendly experiences. We believe that food is a bond
                         that brings people together, which is why we select the best ingredients to create delicious and
-                        unforgettable dishes to share with your loved ones. Each meal is an opportunity to enjoy
-                        together, creating special memories around the table in a warm and welcoming environment for the
-                        whole family.</p>
+                        unforgettable dishes to share with your loved ones. 
+                        <br>
+                        <br>
+                        <b>SCHEDULE</b>
+                        <br>
+                        <br>
+                        Monday to Friday: 7 AM to 9 PM.
+                        <br>
+                        <br>
+                        <b>Weekends</b>
+                        <br>
+                        Saturday: 11 AM to 8 PM.
+                        Sunday: Closed.
+                    </p>
                 </div>
     
                 <div class="col-md-4">
@@ -343,8 +452,15 @@
                         <a href="https://www.tiktok.com/@yourprofile" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
                             <i class="bi bi-tiktok" aria-label="TikTok Icon"></i>
                         </a>
-                      
-
+                        <br>
+                        <br>
+                        <a class="btn btn-warning" 
+                        href="https://wa.me/506XXXXXXXX?text=Hello%20I%20would%20like%20to%20book%20a%20reservation!" 
+                        target="_blank" 
+                        role="button">
+                        Book Here!
+                     </a>
+                     
                     </p>
                     
                 </div>
