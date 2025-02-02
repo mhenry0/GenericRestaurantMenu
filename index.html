@@ -155,14 +155,18 @@
             </div>
         </div>
         
-        <!-- Floating Cart -->
-        <div id="floating-cart">
-            <p>Cart</p>
-            <ul id="cart"></ul>
-            <p id="total">Total: $0.00</p>
-            <button onclick="checkout()">Checkout</button>
-        </div>
-        
+    <!-- Floating Cart -->
+<div id="floating-cart">
+    <p>Cart</p>
+    <ul id="cart"></ul>
+    <p id="total">Total: $0.00</p>
+    <button onclick="checkout()">Checkout</button>
+    <br>
+        <br>
+
+    <button onclick="clearCart()">Clear All</button>
+</div>
+
         <style>
            #floating-cart {
     position: fixed;
@@ -192,6 +196,12 @@
         </style>
         
         <script>
+
+function clearCart() {
+    cart = {}; // Empty the cart
+    updateCartDisplay(); // Update the display to reflect the empty cart
+}
+
             let cart = {};
         
             function updateCart(name, price, quantity) {
