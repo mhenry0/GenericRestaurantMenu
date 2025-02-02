@@ -141,15 +141,107 @@
             </div>
         </div>
     
-            <div class="col-md-4">
-                <div class="menu-item">
-                    <img src="./springroll.jpg" alt="Spring Rolls" class="img-fluid" style="border-radius: 10px;">
-                    <h4>Spring Rolls</h4>
-                    <p><strong>Ingredients:</strong> Cabbage, carrots, glass noodles, soy sauce.</p>
-                    <p><strong>Price:</strong> $8.00</p>
+        <div class="col-md-4">
+            <div class="menu-item">
+                <img src="./springroll.jpg" alt="Spring Rolls" class="img-fluid" style="border-radius: 10px;">
+                <h4>Spring Rolls</h4>
+                <p><strong>Ingredients:</strong> Cabbage, carrots, glass noodles, soy sauce.</p>
+                <p><strong>Price:</strong> $8.00</p>
+                <div class="cart-controls">
+                    <button onclick="updateCart('Spring Rolls', 8.00, -1)">−</button>
+                    <span id="Spring Rolls-count">0</span>
+                    <button onclick="updateCart('Spring Rolls', 8.00, 1)">+</button>
                 </div>
             </div>
+        </div>
+        
+        <!-- Floating Cart -->
+        <div id="floating-cart">
+            <p>Cart</p>
+            <ul id="cart"></ul>
+            <p id="total">Total: $0.00</p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+        
+        <style>
+           #floating-cart {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgb(255, 247, 0);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+}
 
+            .cart-controls {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .cart-controls button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+        
+        <script>
+            let cart = {};
+        
+            function updateCart(name, price, quantity) {
+                if (!cart[name]) {
+                    cart[name] = { price: price, quantity: 0 };
+                }
+                
+                cart[name].quantity += quantity;
+                if (cart[name].quantity <= 0) {
+                    delete cart[name];
+                }
+        
+                updateCartDisplay();
+            }
+        
+            function updateCartDisplay() {
+                let cartList = document.getElementById("cart");
+                let totalElement = document.getElementById("total");
+                cartList.innerHTML = "";
+                let total = 0;
+        
+                Object.keys(cart).forEach(item => {
+                    total += cart[item].price * cart[item].quantity;
+                    let li = document.createElement("li");
+                    li.textContent = `${item} x${cart[item].quantity}`;
+                    cartList.appendChild(li);
+                    
+                    document.getElementById(`${item}-count`).innerText = cart[item].quantity || 0;
+                });
+        
+                totalElement.innerText = `Total: $${total.toFixed(1)}`;
+            }
+        
+            function checkout() {
+                if (Object.keys(cart).length === 0) {
+                    alert("Your cart is empty!");
+                    return;
+                }
+        
+                let orderText = Object.keys(cart).map(item => `${item} x${cart[item].quantity}`).join("\n");
+                let total = Object.values(cart).reduce((sum, item) => sum + item.price * item.quantity, 0);
+                let message = `Hello, I'd like to order:\n\n${orderText}\n\nTotal: $${total.toFixed(2)}`;
+                let encodedMessage = encodeURIComponent(message);
+                let phoneNumber = "50684069995"; // Reemplaza con tu número de WhatsApp
+                let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+                window.location.href = whatsappURL;
+            }
+        </script>
+        
 
             <div id="noodles" class="row"></div>
 
@@ -167,6 +259,11 @@
                     <h4>Pad Thai</h4>
                     <p><strong>Ingredients:</strong> Rice noodles, shrimp, tofu, tamarind sauce, peanuts.</p>
                     <p><strong>Price:</strong> $15.00</p>
+                    <div class="cart-controls">
+                        <button onclick="updateCart('Pad Thai', 15.00, -1)">−</button>
+                        <span id="Pad Thai-count">0</span>
+                        <button onclick="updateCart('Pad Thai', 15.00, 1)">+</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -456,7 +553,7 @@
                         </a>
                         <br>
                         <br>
-                        <a class="btn btn-warning" 
+                        <a class="btn" style="background-color: #ff7700; color: #fff;" 
                         href="https://wa.me/506XXXXXXXX?text=Hello%20I%20would%20like%20to%20book%20a%20reservation!" 
                         target="_blank" 
                         role="button">
